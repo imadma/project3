@@ -20,8 +20,9 @@
     color: #000000;
     overflow: hidden;
     margin-bottom: 0px;
-    box-shadow: 0px 1px 2px #888888 inset;
+    box-shadow: 0px 0px 2px #b9b6e2be inset;
     align-items: center;
+    border-radius: 15px;
 }
 
 li {
@@ -49,11 +50,11 @@ body {
 }
 
 .nav-links li:first-child {
-    border-radius: 0 0 0 0;
+    border-radius: 15px 0 0 15px;
 }
 
 .nav-links li:last-child {
-    border-radius: 0;
+    border-radius: 0 15px 15px 0;
 }
 
 .nav-links li:last-child:hover {
@@ -73,7 +74,7 @@ body {
 }
 
 .nav-links li:hover {
-    background-color: lightgrey;
+    background-color: rgb(145, 154, 255);
 }
 
 .nav-links {
@@ -81,7 +82,7 @@ body {
 }
 
 .sheader {
-
+    margin-top: 0px;
     background-color: lightgray;
     border-radius: 15px;
     text-align: center;
@@ -90,11 +91,7 @@ body {
 }
 
 .sheader h1 {
-    position: absolute;
-    top: 200px;
-    left: 0;
     text-align: center;
-    width: 100%;
     color: honeydew;
 }
 
@@ -114,7 +111,7 @@ body {
     font-size: 35px;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:804px) {
     .nav ul {
         display: none;
     }
@@ -126,7 +123,17 @@ body {
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:500px) {
+    .nav.responsive {
+        justify-content: center;
+    }
+
+    .nav.responsive a.logo {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:804px) {
     .nav.responsive {
         position: relative;
     }
@@ -135,6 +142,15 @@ body {
         position: absolute;
         right: 0;
         top: 0;
+    }
+
+    .nav-links li:first-child {
+        border-radius: 0;
+    }
+
+    .nav-links li:last-child {
+        border-radius: 0;
+        border-bottom: 1px solid skyblue;
     }
 }
 
@@ -228,6 +244,12 @@ p {
     }
 }
 
+@media (max-width:480px) {
+    .sheader h1 {
+        top: 100px;
+    }
+}
+
 .footer-clean .item.social>a {
     font-size: 24px;
     width: 40px;
@@ -264,4 +286,8 @@ p {
     margin-bottom: 0;
     font-size: 13px;
     opacity: 0.6;
+}
+
+.nav li a:hover {
+    color: white !important;
 }

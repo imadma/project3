@@ -6,11 +6,4 @@ function myFunction() {
   } else {
     x.className = "nav";
   }
- 
-  if (x.style.flexDirection === "row"){
-    x.style.flexDirection = "column"
-}else{
-    x.style.flexDirection = "none"
-}
- 
 }
